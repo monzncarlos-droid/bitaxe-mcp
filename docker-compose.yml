@@ -1,0 +1,10 @@
+services:
+  bitaxe-mcp:
+    image: nuxnik/bitaxe-mcp:latest
+    build: .
+    network_mode: host
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - ./.env:/app/.env

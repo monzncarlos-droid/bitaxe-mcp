@@ -1,0 +1,8 @@
+*.pyc
+.env
+.opencode
+.pytest_cache/
+.venv
+__pycache__/
+openspec
+tags
