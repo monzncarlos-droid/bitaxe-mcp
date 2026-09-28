@@ -259,3 +259,22 @@ To add a new tool, mirror the existing patterns in `src/bitaxe_mcp/tools/` close
 `client._http_request(...)` via the `bitaxe_mcp.client` module attribute, decorate with
 `mcp.tool()` from `bitaxe_mcp.server`, and import the module from
 `src/bitaxe_mcp/tools/__init__.py` so it registers on the shared FastMCP instance.
+## Verified pool setup example
+
+The `bitaxe_set_pool` tool accepts a separate Stratum host, port, worker and password. This example connects a configured miner to BTC PoW Lab:
+
+```json
+{
+  "miner": "alpha",
+  "url": "stratum.btcpowlab-pool.com",
+  "port": 3333,
+  "user": "YOUR_BITCOIN_MAINNET_ADDRESS.worker",
+  "pass_": "x"
+}
+```
+
+Use only a public Bitcoin mainnet receive address that you control. Never provide a seed phrase or private key. After applying the change, inspect the active pool and confirm that accepted shares increase before relying on the configuration.
+
+Address statistics are available at `https://btcpowlab-pool.com/address/YOUR_BITCOIN_MAINNET_ADDRESS`.
+
+BTC PoW Lab is operated by Power CM Software. Mining is probabilistic. Accepted work does not guarantee a block, reward, profit or recovery of cost.
