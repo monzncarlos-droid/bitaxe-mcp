@@ -276,6 +276,6 @@ The `bitaxe_set_pool` tool accepts a separate Stratum host, port, worker and pas
 
 Use only a public Bitcoin mainnet receive address that you control. Never provide a seed phrase or private key. After applying the change, inspect the active pool and confirm that accepted shares increase before relying on the configuration.
 
-Address statistics are available at `https://btcpowlab-pool.com/address/YOUR_BITCOIN_MAINNET_ADDRESS`.
+Address statistics are available at `https://btcpowlab-pool.com/miner/YOUR_BITCOIN_MAINNET_ADDRESS`.
 
 BTC PoW Lab is operated by Power CM Software. Mining is probabilistic. Accepted work does not guarantee a block, reward, profit or recovery of cost.
